@@ -7,7 +7,7 @@ Following along with Operating Systems: Three Easy Pieces
 The idea is to be able to do this every single day, atleast for 50 mins. That is
 the time for either 2 Pomodoro (25m each,) or for 1 pomodoro of 50m. Ideally, this
 is best done first thing in the morning, but taking the time out to do this with
-a fresh mind, any particular time of day will work - the point to emphasize is
+a fresh mind, any particular time of day will work - the point to emphasise is
 having a fresh mind for this.
 
 ## Table of Contents [PDF Link](https://pages.cs.wisc.edu/~remzi/OSTEP/toc.pdf)
