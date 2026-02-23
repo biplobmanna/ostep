@@ -1,3 +1,6 @@
+---
+lastSync: Tue Feb 10 2026 20:43:35 GMT+0530 (India Standard Time)
+---
 # Scratch Pad
 
 Use this to collect scrap notes without any organisation.

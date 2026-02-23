@@ -1,3 +1,6 @@
+---
+lastSync: Tue Feb 10 2026 20:43:38 GMT+0530 (India Standard Time)
+---
 # ostep
 
 Following along with Operating Systems: Three Easy Pieces

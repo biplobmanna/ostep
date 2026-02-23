@@ -57,7 +57,7 @@ class scheduler:
         return
 
     def new_process(self):
-        proc_id = len(self.proc_info) # there is hard dependency on this logic
+        proc_id = len(self.proc_info)  # there is hard dependency on this logic
         self.proc_info[proc_id] = {}
         self.proc_info[proc_id][PROC_PC] = 0
         self.proc_info[proc_id][PROC_ID] = proc_id
@@ -115,7 +115,7 @@ class scheduler:
         # oh! x, y are not even part of inputs
         num_instructions, chance_cpu = int(tmp[0]), float(tmp[1]) / 100.0
         for i in range(num_instructions):
-            if random.random(0, 100) < chance_cpu:
+            if random.random() < chance_cpu:
                 self.proc_info[proc_id][PROC_CODE].append(DO_COMPUTE)
             else:
                 # IO and IO_DONE come in pairs
@@ -163,7 +163,7 @@ class scheduler:
         # if pid is provided, set the curr_proc to pid
         # and, move the process to running, if it can be moved that is
         if pid != -1:
-            self.curr_proc = pid # Here, curr_proc is SET to pid
+            self.curr_proc = pid  # Here, curr_proc is SET to pid
             self.move_to_running(STATE_READY)
             return
 
@@ -228,7 +228,7 @@ class scheduler:
     def get_ios_in_flight(self, current_time):
         num_in_flight = 0
         for pid in range(len(self.proc_info)):
-            for t in self.io_finish_times[pid]: # where is io_finish_times defined?
+            for t in self.io_finish_times[pid]:  # where is io_finish_times defined?
                 if t > current_time:
                     num_in_flight += 1
         return num_in_flight
@@ -315,7 +315,7 @@ class scheduler:
                             ):
                                 # and move it do STATE_READY
                                 self.move_to_ready(STATE_RUNNING)
-                        # schedule to the next process
+                        # the process was just in READY, so move it to RUNNING
                         self.next_proc(pid)
                     else:
                         # IO_RUN_LATER
@@ -483,7 +483,7 @@ else:
 
 assert options.io_length >= 0
 
-if options.solve == False:
+if not options.solve:
     print("Produce a trace of what would happen when you run these processes:")
     for pid in range(s.get_num_processes()):
         print("Process %d" % pid)
