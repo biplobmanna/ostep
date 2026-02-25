@@ -1,1 +1,26 @@
 # ignore all, then make provisions for what not to ignore
+*
+!.gitignore
+!*.md
+!*.markdown
+!notes
+!notes/*
+
+!01-cpu-intro
+!01-cpu-intro/*.py
+!01-cpu-intro/*.md
+
+!01-intro
+01-intro/*
+!01-intro/*.c
+!01-intro/*.h
+!01-intro/*.py
+!01-intro/Makefile
+!01-intro/*.md
+
+
+!02-process-api
+02-process-api/*
+!02-process-api/*.c
+!02-process-api/*.py
+!02-process-api/Makefile
